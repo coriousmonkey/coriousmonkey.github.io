@@ -1,164 +1,792 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Metro, a sleek, intuitive, and powerful framework for faster and easier web development for Windows Metro Style.">
-    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, metro, front-end, frontend, web development">
-    <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
 
-
-	<title>metro blog</title>
-    <link href="css/metro.css" rel="stylesheet">
-    <link href="css/metro-icons.css" rel="stylesheet">
-    <link href="css/metro-responsive.css" rel="stylesheet">
-    <link href="css/metro-rtl.css" rel="stylesheet">
-    <link href="css/metro-schemes.css" rel="stylesheet">
-    
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/metro.js"></script>
-    <script>
-    </script>
+	<title>CI Complex Query Table Generate</title>
+	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <script type="text/javascript" src="assets/js/jquery-1.12.3.js" ></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js" ></script>
 </head>
 
-<body style="background-color:white">
-<div><header class="app-bar fixed-top navy" data-role="appbar">
-    <div class="container">
-        <a href="#" class="app-bar-element branding"><img src="img/logo-website.png" style="height: 28px; display: inline-block; margin-right: 10px;"> Blog TI UMJ</a>
+<body>
+		<div class="col-md-12">
+			<nav id="custom-bootstrap-menu" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a id="menu-toggle" class="navbar-brand" href="#">Coriousmonkey</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				  <ul class="nav navbar-nav">
+					<li class="active"><a href="#">Table Generate</a></li>
+					
+				  </ul>
+				</div><!-- /.navbar-collapse -->
 
-        <ul class="app-bar-menu small-dropdown">
-            <li data-flexorder="1" data-flexorderorigin="0">
-                <a href="#" class="dropdown-toggle">Materi</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="#">Pemrograman</a></li>
-                    <li><a href="#">Jaringan</a></li>
-                    <li><a href="#">Keamanan Jaringan</a></li>
-                </ul>
-            </li>
-        </ul>
-		
-		<ul class="app-bar-menu small-dropdown">
-            <li data-flexorder="2" data-flexorderorigin="0">
-                <a href="#" class="dropdown-toggle">Konten</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">Audio</a></li>
-                </ul>
-            </li>
-        </ul>
-		
-        <ul class="app-bar-menu place-right small-dropdown">
-        <li data-flexorder="3" data-flexorderorigin="0">
-                <a href="#" class="dropdown-toggle"> <span class="mif-user"></span></a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="#"><span class="mif-cogs"></span>User Setting</a></li>
-                    <li><a href="#"><span class="mif-unlock"></span>Logout</a></li>
-                </ul>
-            </li>
-        </ul>
-        
+			</nav>
+			
+		</div>
 
-        <span class="app-bar-pull"></span>
-
-    <div style="display: none;" class="app-bar-pullbutton automatic"></div><div class="clearfix" style="width: 0;"></div><nav style="display: none;" class="app-bar-pullmenu hidden flexstyle-app-bar-menu"><ul class="app-bar-pullmenubar hidden app-bar-menu"></ul></nav></div>
-</header>
-</div>
-
-<div style="margin-top: 60px;" class="container page-content">
-    <div class="carousel" data-height="300" data-role="carousel">
-        <div class="slide"><img height="300" width="1200" src="img/car.png" ></div>
-		<div class="slide"><img height="300" width="1200" src="img/9446844.jpg" ></div>
-        <div class="slide"><img height="300" width="1200" src="img/54994174.jpg" ></div>
-		<div class="slide"><img height="300" width="1200" src="img/54994184.jpg" ></div>
-	</div>
-    
-	<div>
-        <h3>Man in the middle attack</h3>
-    	<p>
-			Serangan Man -in - the- middle MITM klasik adalah proses dimana meyakinkan komunikasi antara dua host bahwa komputer di tengah(attacker) adalah host juga . Hal ini dapat dicapai dengan spoofing nama domain jika sistem menggunakan DNS untuk mengidentifikasi protokol host lain atau bisa disebut dengan ARP Spoofing dalam lan . Dalam(Singgle Sing On) SSO Enterprise MITM dilakukan untuk phissing data username dan password yang dilakukan oleh anonym pada saat client user melakukan sign on dengan mencegat proses pengiriman data ke server
-		</p>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8" style="margin-top:100px">
+				
+				<h2>Codeigniter - MySQL Table Generator</h2>
+				<h3>
+					Kadang menulis kode untuk menggenerate data dari mysql query yang cukup rumit dengan tampilan tabel dan pagination sering berulang saya lakukan. Modul ini saya tulis untuk menggenerate tabel dengan tampilan bootstrap dan fitur ci pagination dari mysql query dgn sedikit konfigurasi. 
+				</h3>
+				
+				<br><br>
+				
+				<h3>Contoh : Tabel absensi</h3>
+		<div style="height:400px;overflow:scroll;">
+			    <table class="table" caption="absensi (55 rows)">
+      <thead>
+        <tr>
+          <th class="col0">id</th>
+          <th class="col1">mahasiswa</th>
+          <th class="col2">jadwal</th>
+          <th class="col3">timestamp</th>
+          <th class="col4">pertemuan</th>
+          <th class="col5">ket</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col0">58</td>
+          <td class="col1">1</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">59</td>
+          <td class="col1">2</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">60</td>
+          <td class="col1">12</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">61</td>
+          <td class="col1">13</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">62</td>
+          <td class="col1">14</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">63</td>
+          <td class="col1">15</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">64</td>
+          <td class="col1">16</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">65</td>
+          <td class="col1">17</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">66</td>
+          <td class="col1">18</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">67</td>
+          <td class="col1">19</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">68</td>
+          <td class="col1">20</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-11-20 18:37:57</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">69</td>
+          <td class="col1">1</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">70</td>
+          <td class="col1">2</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">71</td>
+          <td class="col1">12</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">72</td>
+          <td class="col1">13</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">73</td>
+          <td class="col1">14</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">74</td>
+          <td class="col1">15</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">75</td>
+          <td class="col1">16</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">76</td>
+          <td class="col1">17</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">77</td>
+          <td class="col1">18</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">78</td>
+          <td class="col1">19</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">79</td>
+          <td class="col1">20</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:11</td>
+          <td class="col4">2</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">80</td>
+          <td class="col1">1</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">81</td>
+          <td class="col1">2</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">82</td>
+          <td class="col1">12</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">83</td>
+          <td class="col1">13</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">84</td>
+          <td class="col1">14</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">a</td>
+        </tr>
+        <tr>
+          <td class="col0">85</td>
+          <td class="col1">15</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">86</td>
+          <td class="col1">16</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">s</td>
+        </tr>
+        <tr>
+          <td class="col0">87</td>
+          <td class="col1">17</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">88</td>
+          <td class="col1">18</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">89</td>
+          <td class="col1">19</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">90</td>
+          <td class="col1">20</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:48:48</td>
+          <td class="col4">3</td>
+          <td class="col5">s</td>
+        </tr>
+        <tr>
+          <td class="col0">91</td>
+          <td class="col1">1</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">s</td>
+        </tr>
+        <tr>
+          <td class="col0">92</td>
+          <td class="col1">2</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">93</td>
+          <td class="col1">12</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">94</td>
+          <td class="col1">13</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">95</td>
+          <td class="col1">14</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">a</td>
+        </tr>
+        <tr>
+          <td class="col0">96</td>
+          <td class="col1">15</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">97</td>
+          <td class="col1">16</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">s</td>
+        </tr>
+        <tr>
+          <td class="col0">98</td>
+          <td class="col1">17</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">99</td>
+          <td class="col1">18</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">100</td>
+          <td class="col1">19</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">101</td>
+          <td class="col1">20</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:18</td>
+          <td class="col4">3</td>
+          <td class="col5">s</td>
+        </tr>
+        <tr>
+          <td class="col0">102</td>
+          <td class="col1">1</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">103</td>
+          <td class="col1">2</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">104</td>
+          <td class="col1">12</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">105</td>
+          <td class="col1">13</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">106</td>
+          <td class="col1">14</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">107</td>
+          <td class="col1">15</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">a</td>
+        </tr>
+        <tr>
+          <td class="col0">108</td>
+          <td class="col1">16</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">a</td>
+        </tr>
+        <tr>
+          <td class="col0">109</td>
+          <td class="col1">17</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">110</td>
+          <td class="col1">18</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">111</td>
+          <td class="col1">19</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+        <tr>
+          <td class="col0">112</td>
+          <td class="col1">20</td>
+          <td class="col2">1</td>
+          <td class="col3">2016-12-06 17:49:31</td>
+          <td class="col4">1</td>
+          <td class="col5">h</td>
+        </tr>
+      </tbody>
+    </table>
+			
+		</div>
 		
-		<p>
-			Serangan MITM untuk password pissing dengan menganalisa data komunikasi antar server dan klien diketahui dapat dihindari dengan penerapan SSL/TLS. SSL menyediakan sebuah komponen penting pada sistem yang aman. Mekanisme otentikasi dasar seperti password Telnet dan otentikasi HTTP dasar menjadi sangat kuat ketika dieksekusi dengan SSL dibandingkan dengan TCP, di mana pada SSL password tidak lagi dikirim dalam bentuk plainteks. SSL mengenkripsi koneksi, bukan data pada kedua pihak yang berkomunikasi, dan tidak mengandung mekanisme untuk otentikasi user ataupun perlindungan password (hanya koneksi yang diotentikasi, keamanannya akan gagal jika mesin pada kedua pihak yang berkomunikasi compromised. protokol transmisi ini relatif lebih aman dan dapat menjaga integritas data yang mencegah informasi yang pengguna sedang disadap.
-		</p>
-        
-        <div data-role="dialog" id="dialog" class="padding20 dialog" data-close-button="true" data-overlay="true" data-overlay-color="op-dark" data-overlay-click-close="true" >
-            <h3>Selamat Datang</h3>
-            <p>
-                Di Blog sederhana TI UMJ
-            </p>
-            <button class="button primary" onclick="hideMetroDialog('#dialog')">OK</button>
-        </div>
-        
-        
-        <br /><br />
-        <hr />
-        <h3>Audio</h3>
-        <div data-role="audio">
-            <audio>
-                <source src="music/payung teduh Untuk Perempuan Yang Sedang Dalam Pelukan (1).mp3" type='audio/mp3' /></audio>
-        </div>
+		<br><br>
+		<h3>Contoh: Tabel Mahasiswa</h3>
+		<div style="height:400px;overflow:scroll;">
+			    <table class="table" caption="mahasiswa (29 rows)">
+      <thead>
+        <tr>
+          <th class="col0">id</th>
+          <th class="col1">nim</th>
+          <th class="col2">user</th>
+          <th class="col3">angkatan</th>
+          <th class="col4">kelas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col0">1</td>
+          <td class="col1">E32140625</td>
+          <td class="col2">wildan</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">2</td>
+          <td class="col1">E32140625</td>
+          <td class="col2">herman</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">12</td>
+          <td class="col1">E32140627</td>
+          <td class="col2">pras</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">13</td>
+          <td class="col1">E32140628</td>
+          <td class="col2">dimas</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">14</td>
+          <td class="col1">E32140629</td>
+          <td class="col2">yudi</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">15</td>
+          <td class="col1">E32140630</td>
+          <td class="col2">rio</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">16</td>
+          <td class="col1">E32140631</td>
+          <td class="col2">ihsan</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">17</td>
+          <td class="col1">E32140632</td>
+          <td class="col2">febi</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">18</td>
+          <td class="col1">E32140633</td>
+          <td class="col2">eko</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">19</td>
+          <td class="col1">E32140634</td>
+          <td class="col2">heni</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">20</td>
+          <td class="col1">E32140635</td>
+          <td class="col2">ridho</td>
+          <td class="col3">2014</td>
+          <td class="col4">a</td>
+        </tr>
+        <tr>
+          <td class="col0">21</td>
+          <td class="col1">E32140636</td>
+          <td class="col2">choir</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">22</td>
+          <td class="col1">E32140637</td>
+          <td class="col2">ilmi</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">23</td>
+          <td class="col1">E32140638</td>
+          <td class="col2">fahri</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">24</td>
+          <td class="col1">E32140639</td>
+          <td class="col2">koplak</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">25</td>
+          <td class="col1">E32140640</td>
+          <td class="col2">bayu</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">26</td>
+          <td class="col1">E32140641</td>
+          <td class="col2">tyas</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">27</td>
+          <td class="col1">E32140642</td>
+          <td class="col2">yogi</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">29</td>
+          <td class="col1">E32140644</td>
+          <td class="col2">zen</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">30</td>
+          <td class="col1">E32140645</td>
+          <td class="col2">nawer</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">31</td>
+          <td class="col1">E32140646</td>
+          <td class="col2">adi</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">32</td>
+          <td class="col1">E32140647</td>
+          <td class="col2">wulan</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">33</td>
+          <td class="col1">E32140648</td>
+          <td class="col2">siska</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">34</td>
+          <td class="col1">E32140649</td>
+          <td class="col2">dani</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">35</td>
+          <td class="col1">E32140650</td>
+          <td class="col2">andi</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">36</td>
+          <td class="col1">E32140651</td>
+          <td class="col2">ali</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">37</td>
+          <td class="col1">E32140652</td>
+          <td class="col2">sandi</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">38</td>
+          <td class="col1">E32140653</td>
+          <td class="col2">rasid</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+        <tr>
+          <td class="col0">39</td>
+          <td class="col1">E32140654</td>
+          <td class="col2">hamid</td>
+          <td class="col3">2014</td>
+          <td class="col4">b</td>
+        </tr>
+      </tbody>
+    </table>
+
+		</div>
 		
-		<hr>
-		<h5>Player multi list</h5>
-            <div data-role="audio">
-                <div class="play-list-wrapper">
-                    <h1 class="album-title">Playlist</h1>
-                    <ul class="play-list">
-                        <li data-src="music/Scorpions - Still Love You - MP3 Unduh, Putar, Dengar Lagu - 4shared.mp3" data-type="audio/mp3">Scorpion - Still Loving you</li>
-                        <li data-src="music/Scorpion Wind Of Change Mp3 Download.mp3" data-type="audio/mp3">Scorpion - Wind of change</li>
-                        <li data-src="music/Now Playing- Foo Fighters - Something From Nothing.mp3" data-type="audio/mp3">Foo Fighter - Something from nothing</li>
-                    </ul>
+				
+				<br><br>
+				
+				
+				<h3>
+					Jalankan query berikut :
+				</h3>
+				<pre>select * from
+        (
+     		
+     select absensi.id,absensi.`timestamp`, 
+absensi.pertemuan as `pertemuanke`,
+absensi.ket,
+
+mahasiswa.nim,
+mahasiswa.`user`,
+mahasiswa.angkatan,
+mahasiswa.kelas
+
+from absensi
+left join mahasiswa
+on absensi.mahasiswa=mahasiswa.id
+where absensi.jadwal=1
+order by mahasiswa.id
+     
+        )
+        as tbb
+        group by nim,pertemuanke
+        order by pertemuanke,nim</pre>
+		<br><br>
+		
+		<h3>
+		Untuk menampilkan langsung tabelnya dengan :
+		</h3>
+		
+		<pre>
+        $this->Table_gen->id='id'; //fieldname yang akan dijadikan key untuk edit url dan delete
+        $this->Table_gen->edit_url=site_url().'/Absensi/edit/'; //url controller untuk edit (opsional)
+        $this->Table_gen->delete_url=site_url().'/Absensi/delete/'; //url controller untuk delete (opsional)
+        $this->Table_gen->controller_url=site_url().'/Absensi/'; // url controller harus diisi
+        $this->Table_gen->query = $query_diatas; //string query gak usah dikasih limit ya... :)
+		
+        $tabele= $this->Table_gen->with_paging_query();
+        
+        $data=array(
+            'konten'=>$tabele,
+        );
+        
+        $this->load->view('coba',$data);
+		</pre><br><br>
+		
+		<h3>Hasilnya</h3>
+		<div>
+		
+<div style="overflow-x:scroll;"><table class="table table-bordered"><thead><tr><th>id</th><th>timestamp</th><th>pertemuanke</th><th>ket</th><th>nim</th><th>user</th><th>angkatan</th><th>kelas</th><th style="">action</th></tr></thead><tbody><tr><td>58</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140625</td><td>wildan</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=58">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=58">Delete</a></div></th></tr><tr><td>60</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140627</td><td>pras</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=60">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=60">Delete</a></div></th></tr><tr><td>61</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140628</td><td>dimas</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=61">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=61">Delete</a></div></th></tr><tr><td>62</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140629</td><td>yudi</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=62">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=62">Delete</a></div></th></tr><tr><td>63</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140630</td><td>rio</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=63">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=63">Delete</a></div></th></tr><tr><td>64</td><td>2016-11-20 18:37:57</td><td>1</td><td>h</td><td>E32140631</td><td>ihsan</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=64">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=64">Delete</a></div></th></tr><tr><td>109</td><td>2016-12-06 17:49:31</td><td>1</td><td>h</td><td>E32140632</td><td>febi</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=109">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=109">Delete</a></div></th></tr><tr><td>110</td><td>2016-12-06 17:49:31</td><td>1</td><td>h</td><td>E32140633</td><td>eko</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=110">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=110">Delete</a></div></th></tr><tr><td>111</td><td>2016-12-06 17:49:31</td><td>1</td><td>h</td><td>E32140634</td><td>heni</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=111">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=111">Delete</a></div></th></tr><tr><td>112</td><td>2016-12-06 17:49:31</td><td>1</td><td>h</td><td>E32140635</td><td>ridho</td><td>2014</td><td>a</td><th><div class="btn-group btn-group-sm" style="width:100px;"><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/edit/?id=112">Edit</a><a class="btn btn-default" href="http://localhost/ci3/index.php/Absensi/delete/?id=112">Delete</a></div></th></tr></tbody></table></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-primary"> Total Record 30</a>
+                    </div>
+                    <div class="col-md-6 text-right"><nav><ul class="pagination" style="margin-top:0px"><li class="active"><a>1</a></li><li><a href="http://localhost/ci3/index.php/Absensi/?start=10" data-ci-pagination-page="2">2</a></li><li><a href="http://localhost/ci3/index.php/Absensi/?start=20" data-ci-pagination-page="3">3</a></li><li><a href="http://localhost/ci3/index.php/Absensi/?start=10" data-ci-pagination-page="2" rel="next">Next</a></li></ul></nav></div>
                 </div>
-            </div>
-        
-        <br /><br />
-        <hr />
-        <h3>Video</h3>
-        <div data-role="video">
-            <video>
-                <source src="video/Kimbra - Love In High Places [Official Lyric Video] - YouTube [360p].mp4" type='video/mp4' />
-            </video>
-        </div>
-	
-<br>
-</br>
-    
-	</div> <!-- konten end -->
-
-	
-	
-	</div>
-	<div style="width:100%;background-color:#EFEAE3;">
-	<br><br></br></br>
-	<center>
-		<table width="700px" >
-		<tr>
-			<td width="30" >No</td>
-			<td>Nim</td>
-			<td>Nama</td>
-		</tr>
-		<tr>
-			<td>1</td>
-			<td>1510651168</td>
-			<td>Harits Wahyu h</td>
-		</tr>
-		<tr>
-			<td>2</td>
-			<td>110651099</td>
-			<td>Elgy Kossika</td>
-		</tr>
-		<tr>
-			<td>3</td>
-			<td>1210651070</td>
-			<td>Alifia Mifta hul A</td>
-		</tr>
-		</table>
-	</center>
-    <br /><br /><br /><br />
-	<div style="position: absolute;" ><span style="margin:auto;">copyleft @hhh</span></div>
-	</div>
-
+		</div>
+				
+			</div>
+			<div class="col-md-2"></div>
+		</div>
 </body>
 </html>
